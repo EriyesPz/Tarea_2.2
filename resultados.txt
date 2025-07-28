@@ -1,0 +1,27 @@
+Objetivo:
+Predecir el valor medio de una vivienda (median_house_value) utilizando características como ingresos medios, antigüedad de la vivienda, número de habitaciones, entre otras.
+
+Modelo 1: Árbol de Decisión (DecisionTreeRegressor)
+
+- R^2: 0.6278
+- RMSE: 71,341.05
+
+Este modelo logra predecir con un 62.78% de precisión. Tiene un error promedio de aproximadamente 71 mil dólares, lo cual es aceptable dado que los valores de las casas superan los 300 mil. Se utiliza una profundidad máxima de 5 para evitar sobreajuste.
+
+Modelo 2: Máquina de Vectores de Soporte (SVR)
+
+- R^2: 0.3166
+- RMSE: 96,676.25
+
+El modelo SVM alcanza un 31.66% de precisión. Su error es más alto que el del árbol. Se ajustan los parámetros `C=100`, `epsilon=500` y `gamma=0.1` para mejorar el desempeño. Aunque no es el modelo más preciso en este caso, cumple con su función y permite comparar dos enfoques distintos de regresión.
+
+
+Gráficas generadas:
+
+1. arbol_decision.png: muestra la estructura del árbol de decisión entrenado.
+2. mapa_correlacion.png: representa las correlaciones entre las variables del dataset.
+3. relaciones_variables.png: visualiza las relaciones entre las variables más relevantes para la predicción.
+
+
+Conclusión:
+El Árbol de Decisión ofrece mejores resultados que el modelo SVM para este conjunto de datos. Ambos modelos están entrenados correctamente y permiten analizar cómo distintos algoritmos abordan el mismo problema de predicción.
